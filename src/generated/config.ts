@@ -112,206 +112,395 @@ export interface Config {
   "list-indent"?: boolean
   "list-marker-space"?: boolean | MD030Class
   /**
-   * MD001/heading-increment/header-increment - Heading levels should only increment by one
-   * level at a time
+   * Heading levels should only increment by one level at a time.
+   *
+   * Aliases: `heading-increment`, `header-increment`
+   *
+   * @see [MD001](https://github.com/DavidAnson/markdownlint/blob/main/doc/md001.md)
    */
   MD001?: boolean
   /**
-   * MD002/first-heading-h1/first-header-h1 - First heading should be a top-level heading
+   * First heading should be a top-level heading.
+   *
+   * Aliases: `first-heading-h1`, `first-header-h1`
+   *
+   * @see [MD002](https://github.com/DavidAnson/markdownlint/blob/main/doc/md002.md)
    */
   MD002?: boolean | MD002Class
   /**
-   * MD003/heading-style/header-style - Heading style
+   * Heading style.
+   *
+   * Aliases: `heading-style`, `header-style`
+   *
+   * @see [MD003](https://github.com/DavidAnson/markdownlint/blob/main/doc/md003.md)
    */
   MD003?: boolean | MD003Class
   /**
-   * MD004/ul-style - Unordered list style
+   * Unordered list style.
+   *
+   * Aliases: `ul-style`
+   *
+   * @see [MD004](https://github.com/DavidAnson/markdownlint/blob/main/doc/md004.md)
    */
   MD004?: boolean | Md004
   /**
-   * MD005/list-indent - Inconsistent indentation for list items at the same level
+   * Inconsistent indentation for list items at the same level.
+   *
+   * Aliases: `list-indent`
+   *
+   * @see [MD005](https://github.com/DavidAnson/markdownlint/blob/main/doc/md005.md)
    */
   MD005?: boolean
   /**
-   * MD006/ul-start-left - Consider starting bulleted lists at the beginning of the line
+   * Consider starting bulleted lists at the beginning of the line.
+   *
+   * Aliases: `ul-start-left`
+   *
+   * @see [MD006](https://github.com/DavidAnson/markdownlint/blob/main/doc/md006.md)
    */
   MD006?: boolean
   /**
-   * MD007/ul-indent - Unordered list indentation
+   * Unordered list indentation.
+   *
+   * Aliases: `ul-indent`
+   *
+   * @see [MD007](https://github.com/DavidAnson/markdownlint/blob/main/doc/md007.md)
    */
   MD007?: boolean | Md007
   /**
-   * MD009/no-trailing-spaces - Trailing spaces
+   * Trailing spaces.
+   *
+   * Aliases: `no-trailing-spaces`
+   *
+   * @see [MD009](https://github.com/DavidAnson/markdownlint/blob/main/doc/md009.md)
    */
   MD009?: boolean | Md009
   /**
-   * MD010/no-hard-tabs - Hard tabs
+   * Hard tabs.
+   *
+   * Aliases: `no-hard-tabs`
+   *
+   * @see [MD010](https://github.com/DavidAnson/markdownlint/blob/main/doc/md010.md)
    */
   MD010?: boolean | Md010
   /**
-   * MD011/no-reversed-links - Reversed link syntax
+   * Reversed link syntax.
+   *
+   * Aliases: `no-reversed-links`
+   *
+   * @see [MD011](https://github.com/DavidAnson/markdownlint/blob/main/doc/md011.md)
    */
   MD011?: boolean
   /**
-   * MD012/no-multiple-blanks - Multiple consecutive blank lines
+   * Multiple consecutive blank lines.
+   *
+   * Aliases: `no-multiple-blanks`
+   *
+   * @see [MD012](https://github.com/DavidAnson/markdownlint/blob/main/doc/md012.md)
    */
   MD012?: boolean | Md012
   /**
-   * MD013/line-length - Line length
+   * Line length.
+   *
+   * Aliases: `line-length`
+   *
+   * @see [MD013](https://github.com/DavidAnson/markdownlint/blob/main/doc/md013.md)
    */
   MD013?: boolean | MD013Class
   /**
-   * MD014/commands-show-output - Dollar signs used before commands without showing output
+   * Dollar signs used before commands without showing output.
+   *
+   * Aliases: `commands-show-output`
+   *
+   * @see [MD014](https://github.com/DavidAnson/markdownlint/blob/main/doc/md014.md)
    */
   MD014?: boolean
   /**
-   * MD018/no-missing-space-atx - No space after hash on atx style heading
+   * No space after hash on atx style heading.
+   *
+   * Aliases: `no-missing-space-atx`
+   *
+   * @see [MD018](https://github.com/DavidAnson/markdownlint/blob/main/doc/md018.md)
    */
   MD018?: boolean
   /**
-   * MD019/no-multiple-space-atx - Multiple spaces after hash on atx style heading
+   * Multiple spaces after hash on atx style heading.
+   *
+   * Aliases: `no-multiple-space-atx`
+   *
+   * @see [MD019](https://github.com/DavidAnson/markdownlint/blob/main/doc/md019.md)
    */
   MD019?: boolean
   /**
-   * MD020/no-missing-space-closed-atx - No space inside hashes on closed atx style heading
+   * No space inside hashes on closed atx style heading.
+   *
+   * Aliases: `no-missing-space-closed-atx`
+   *
+   * @see [MD020](https://github.com/DavidAnson/markdownlint/blob/main/doc/md020.md)
    */
   MD020?: boolean
   /**
-   * MD021/no-multiple-space-closed-atx - Multiple spaces inside hashes on closed atx style
-   * heading
+   * Multiple spaces inside hashes on closed atx style heading.
+   *
+   * Aliases: `no-multiple-space-closed-atx`
+   *
+   * @see [MD021](https://github.com/DavidAnson/markdownlint/blob/main/doc/md021.md)
    */
   MD021?: boolean
   /**
-   * MD022/blanks-around-headings/blanks-around-headers - Headings should be surrounded by
-   * blank lines
+   * Headings should be surrounded by blank lines.
+   *
+   * Aliases: `blanks-around-headings`, `blanks-around-headers`
+   *
+   * @see [MD022](https://github.com/DavidAnson/markdownlint/blob/main/doc/md022.md)
    */
   MD022?: boolean | MD022Class
   /**
-   * MD023/heading-start-left/header-start-left - Headings must start at the beginning of the
-   * line
+   * Headings must start at the beginning of the line.
+   *
+   * Aliases: `heading-start-left`, `header-start-left`
+   *
+   * @see [MD023](https://github.com/DavidAnson/markdownlint/blob/main/doc/md023.md)
    */
   MD023?: boolean
   /**
-   * MD024/no-duplicate-heading/no-duplicate-header - Multiple headings with the same content
+   * Multiple headings with the same content.
+   *
+   * Aliases: `no-duplicate-heading`, `no-duplicate-header`
+   *
+   * @see [MD024](https://github.com/DavidAnson/markdownlint/blob/main/doc/md024.md)
    */
   MD024?: boolean | Md024
   /**
-   * MD025/single-title/single-h1 - Multiple top-level headings in the same document
+   * Multiple top-level headings in the same document.
+   *
+   * Aliases: `single-title`, `single-h1`
+   *
+   * @see [MD025](https://github.com/DavidAnson/markdownlint/blob/main/doc/md025.md)
    */
   MD025?: boolean | Md025
   /**
-   * MD026/no-trailing-punctuation - Trailing punctuation in heading
+   * Trailing punctuation in heading.
+   *
+   * Aliases: `no-trailing-punctuation`
+   *
+   * @see [MD026](https://github.com/DavidAnson/markdownlint/blob/main/doc/md026.md)
    */
   MD026?: boolean | Md026
   /**
-   * MD027/no-multiple-space-blockquote - Multiple spaces after blockquote symbol
+   * Multiple spaces after blockquote symbol.
+   *
+   * Aliases: `no-multiple-space-blockquote`
+   *
+   * @see [MD027](https://github.com/DavidAnson/markdownlint/blob/main/doc/md027.md)
    */
   MD027?: boolean
   /**
-   * MD028/no-blanks-blockquote - Blank line inside blockquote
+   * Blank line inside blockquote.
+   *
+   * Aliases: `no-blanks-blockquote`
+   *
+   * @see [MD028](https://github.com/DavidAnson/markdownlint/blob/main/doc/md028.md)
    */
   MD028?: boolean
   /**
-   * MD029/ol-prefix - Ordered list item prefix
+   * Ordered list item prefix.
+   *
+   * Aliases: `ol-prefix`
+   *
+   * @see [MD029](https://github.com/DavidAnson/markdownlint/blob/main/doc/md029.md)
    */
   MD029?: boolean | Md029
   /**
-   * MD030/list-marker-space - Spaces after list markers
+   * Spaces after list markers.
+   *
+   * Aliases: `list-marker-space`
+   *
+   * @see [MD030](https://github.com/DavidAnson/markdownlint/blob/main/doc/md030.md)
    */
   MD030?: boolean | MD030Class
   /**
-   * MD031/blanks-around-fences - Fenced code blocks should be surrounded by blank lines
+   * Fenced code blocks should be surrounded by blank lines.
+   *
+   * Aliases: `blanks-around-fences`
+   *
+   * @see [MD031](https://github.com/DavidAnson/markdownlint/blob/main/doc/md031.md)
    */
   MD031?: boolean | MD031Class
   /**
-   * MD032/blanks-around-lists - Lists should be surrounded by blank lines
+   * Lists should be surrounded by blank lines.
+   *
+   * Aliases: `blanks-around-lists`
+   *
+   * @see [MD032](https://github.com/DavidAnson/markdownlint/blob/main/doc/md032.md)
    */
   MD032?: boolean
   /**
-   * MD033/no-inline-html - Inline HTML
+   * Inline HTML.
+   *
+   * Aliases: `no-inline-html`
+   *
+   * @see [MD033](https://github.com/DavidAnson/markdownlint/blob/main/doc/md033.md)
    */
   MD033?: boolean | Md033
   /**
-   * MD034/no-bare-urls - Bare URL used
+   * Bare URL used.
+   *
+   * Aliases: `no-bare-urls`
+   *
+   * @see [MD034](https://github.com/DavidAnson/markdownlint/blob/main/doc/md034.md)
    */
   MD034?: boolean
   /**
-   * MD035/hr-style - Horizontal rule style
+   * Horizontal rule style.
+   *
+   * Aliases: `hr-style`
+   *
+   * @see [MD035](https://github.com/DavidAnson/markdownlint/blob/main/doc/md035.md)
    */
   MD035?: boolean | MD035Class
   /**
-   * MD036/no-emphasis-as-heading/no-emphasis-as-header - Emphasis used instead of a heading
+   * Emphasis used instead of a heading.
+   *
+   * Aliases: `no-emphasis-as-heading`, `no-emphasis-as-header`
+   *
+   * @see [MD036](https://github.com/DavidAnson/markdownlint/blob/main/doc/md036.md)
    */
   MD036?: boolean | Md036
   /**
-   * MD037/no-space-in-emphasis - Spaces inside emphasis markers
+   * Spaces inside emphasis markers.
+   *
+   * Aliases: `no-space-in-emphasis`
+   *
+   * @see [MD037](https://github.com/DavidAnson/markdownlint/blob/main/doc/md037.md)
    */
   MD037?: boolean
   /**
-   * MD038/no-space-in-code - Spaces inside code span elements
+   * Spaces inside code span elements.
+   *
+   * Aliases: `no-space-in-code`
+   *
+   * @see [MD038](https://github.com/DavidAnson/markdownlint/blob/main/doc/md038.md)
    */
   MD038?: boolean
   /**
-   * MD039/no-space-in-links - Spaces inside link text
+   * Spaces inside link text.
+   *
+   * Aliases: `no-space-in-links`
+   *
+   * @see [MD039](https://github.com/DavidAnson/markdownlint/blob/main/doc/md039.md)
    */
   MD039?: boolean
   /**
-   * MD040/fenced-code-language - Fenced code blocks should have a language specified
+   * Fenced code blocks should have a language specified.
+   *
+   * Aliases: `fenced-code-language`
+   *
+   * @see [MD040](https://github.com/DavidAnson/markdownlint/blob/main/doc/md040.md)
    */
   MD040?: boolean | MD040Class
   /**
-   * MD041/first-line-heading/first-line-h1 - First line in a file should be a top-level
-   * heading
+   * First line in a file should be a top-level heading.
+   *
+   * Aliases: `first-line-heading`, `first-line-h1`
+   *
+   * @see [MD041](https://github.com/DavidAnson/markdownlint/blob/main/doc/md041.md)
    */
   MD041?: boolean | MD041Class
   /**
-   * MD042/no-empty-links - No empty links
+   * No empty links.
+   *
+   * Aliases: `no-empty-links`
+   *
+   * @see [MD042](https://github.com/DavidAnson/markdownlint/blob/main/doc/md042.md)
    */
   MD042?: boolean
   /**
-   * MD043/required-headings/required-headers - Required heading structure
+   * Required heading structure.
+   *
+   * Aliases: `required-headings`, `required-headers`
+   *
+   * @see [MD043](https://github.com/DavidAnson/markdownlint/blob/main/doc/md043.md)
    */
   MD043?: boolean | Md043
   /**
-   * MD044/proper-names - Proper names should have the correct capitalization
+   * Proper names should have the correct capitalization.
+   *
+   * Aliases: `proper-names`
+   *
+   * @see [MD044](https://github.com/DavidAnson/markdownlint/blob/main/doc/md044.md)
    */
   MD044?: boolean | Md044
   /**
-   * MD045/no-alt-text - Images should have alternate text (alt text)
+   * Images should have alternate text (alt text).
+   *
+   * Aliases: `no-alt-text`
+   *
+   * @see [MD045](https://github.com/DavidAnson/markdownlint/blob/main/doc/md045.md)
    */
   MD045?: boolean
   /**
-   * MD046/code-block-style - Code block style
+   * Code block style.
+   *
+   * Aliases: `code-block-style`
+   *
+   * @see [MD046](https://github.com/DavidAnson/markdownlint/blob/main/doc/md046.md)
    */
   MD046?: boolean | MD046Class
   /**
-   * MD047/single-trailing-newline - Files should end with a single newline character
+   * Files should end with a single newline character.
+   *
+   * Aliases: `single-trailing-newline`
+   *
+   * @see [MD047](https://github.com/DavidAnson/markdownlint/blob/main/doc/md047.md)
    */
   MD047?: boolean
   /**
-   * MD048/code-fence-style - Code fence style
+   * Code fence style.
+   *
+   * Aliases: `code-fence-style`
+   *
+   * @see [MD048](https://github.com/DavidAnson/markdownlint/blob/main/doc/md048.md)
    */
   MD048?: boolean | MD048Class
   /**
-   * MD049/emphasis-style - Emphasis style should be consistent
+   * Emphasis style should be consistent.
+   *
+   * Aliases: `emphasis-style`
+   *
+   * @see [MD049](https://github.com/DavidAnson/markdownlint/blob/main/doc/md049.md)
    */
   MD049?: boolean | MD049Class
   /**
-   * MD050/strong-style - Strong style should be consistent
+   * Strong style should be consistent.
+   *
+   * Aliases: `strong-style`
+   *
+   * @see [MD050](https://github.com/DavidAnson/markdownlint/blob/main/doc/md050.md)
    */
   MD050?: boolean | Md050
   /**
-   * MD051/link-fragments - Link fragments should be valid
+   * Link fragments should be valid.
+   *
+   * Aliases: `link-fragments`
+   *
+   * @see [MD051](https://github.com/DavidAnson/markdownlint/blob/main/doc/md051.md)
    */
   MD051?: boolean
   /**
-   * MD052/reference-links-images - Reference links and images should use a label that is
-   * defined
+   * Reference links and images should use a label that is defined.
+   *
+   * Aliases: `reference-links-images`
+   *
+   * @see [MD052](https://github.com/DavidAnson/markdownlint/blob/main/doc/md052.md)
    */
   MD052?: boolean | Md052
   /**
-   * MD053/link-image-reference-definitions - Link and image reference definitions should be
-   * needed
+   * Link and image reference definitions should be needed.
+   *
+   * Aliases: `link-image-reference-definitions`
+   *
+   * @see [MD053](https://github.com/DavidAnson/markdownlint/blob/main/doc/md053.md)
    */
   MD053?: boolean | MD053Class
   "no-alt-text"?: boolean

@@ -18,12 +18,36 @@ async function main() {
 
   // This is needed, otherwise the ts interface would be invalid
   schema.additionalProperties = true
+  generateJSDocDescriptions(schema)
 
   const text = await quicktypeJSONSchema(JSON.stringify(schema))
   const textWithEslintIgnoreComment = addEslintIgnoreComment(text)
   const formattedText = await format(textWithEslintIgnoreComment)
 
   await writeFile(OUTPUT_PATH, formattedText)
+}
+
+function generateJSDocDescriptions({ properties }: any) {
+  for (const [name, property] of Object.entries<any>(properties)) {
+    if (isRuleDefinition(name)) {
+      property.description = generateRuleDescription(name, property.description)
+    }
+  }
+}
+
+function generateRuleDescription(name: string, schemaDescription: string) {
+  const [names, title] = schemaDescription.split(" - ")
+  const [_, ...aliases] = names.split("/")
+  const aliasesAsText = aliases.map((alias) => `\`${alias}\``).join(", ")
+
+  const lowercasedName = name.toLowerCase()
+  const documentationUrl = `https://github.com/DavidAnson/markdownlint/blob/main/doc/${lowercasedName}.md`
+  const documentationMarkdownLink = `[${name}](${documentationUrl})`
+  return `${title}.\n\nAliases: ${aliasesAsText}\n\n@see ${documentationMarkdownLink}`
+}
+
+function isRuleDefinition(ruleName: string) {
+  return ruleName.startsWith("MD")
 }
 
 async function quicktypeJSONSchema(jsonSchemaString: string) {
