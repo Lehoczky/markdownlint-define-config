@@ -5,19 +5,25 @@ export interface Config {
    */
   $schema?: string
   /**
-   * accessibility - MD045
+   * accessibility - [MD045](https://github.com/DavidAnson/markdownlint/blob/main/doc/md045.md)
    */
   accessibility?: boolean
   /**
-   * atx - MD018, MD019
+   * atx - [MD018](https://github.com/DavidAnson/markdownlint/blob/main/doc/md018.md),
+   * [MD019](https://github.com/DavidAnson/markdownlint/blob/main/doc/md019.md)
    */
   atx?: boolean
   /**
-   * atx_closed - MD020, MD021
+   * atx_closed - [MD020](https://github.com/DavidAnson/markdownlint/blob/main/doc/md020.md),
+   * [MD021](https://github.com/DavidAnson/markdownlint/blob/main/doc/md021.md)
    */
   atx_closed?: boolean
   /**
-   * blank_lines - MD012, MD022, MD031, MD032, MD047
+   * blank_lines - [MD012](https://github.com/DavidAnson/markdownlint/blob/main/doc/md012.md),
+   * [MD022](https://github.com/DavidAnson/markdownlint/blob/main/doc/md022.md),
+   * [MD031](https://github.com/DavidAnson/markdownlint/blob/main/doc/md031.md),
+   * [MD032](https://github.com/DavidAnson/markdownlint/blob/main/doc/md032.md),
+   * [MD047](https://github.com/DavidAnson/markdownlint/blob/main/doc/md047.md)
    */
   blank_lines?: boolean
   "blanks-around-fences"?: boolean | MD031Class
@@ -25,15 +31,25 @@ export interface Config {
   "blanks-around-headings"?: boolean | MD022Class
   "blanks-around-lists"?: boolean
   /**
-   * blockquote - MD027, MD028
+   * blockquote - [MD027](https://github.com/DavidAnson/markdownlint/blob/main/doc/md027.md),
+   * [MD028](https://github.com/DavidAnson/markdownlint/blob/main/doc/md028.md)
    */
   blockquote?: boolean
   /**
-   * bullet - MD004, MD005, MD006, MD007, MD032
+   * bullet - [MD004](https://github.com/DavidAnson/markdownlint/blob/main/doc/md004.md),
+   * [MD005](https://github.com/DavidAnson/markdownlint/blob/main/doc/md005.md),
+   * [MD006](https://github.com/DavidAnson/markdownlint/blob/main/doc/md006.md),
+   * [MD007](https://github.com/DavidAnson/markdownlint/blob/main/doc/md007.md),
+   * [MD032](https://github.com/DavidAnson/markdownlint/blob/main/doc/md032.md)
    */
   bullet?: boolean
   /**
-   * code - MD014, MD031, MD038, MD040, MD046, MD048
+   * code - [MD014](https://github.com/DavidAnson/markdownlint/blob/main/doc/md014.md),
+   * [MD031](https://github.com/DavidAnson/markdownlint/blob/main/doc/md031.md),
+   * [MD038](https://github.com/DavidAnson/markdownlint/blob/main/doc/md038.md),
+   * [MD040](https://github.com/DavidAnson/markdownlint/blob/main/doc/md040.md),
+   * [MD046](https://github.com/DavidAnson/markdownlint/blob/main/doc/md046.md),
+   * [MD048](https://github.com/DavidAnson/markdownlint/blob/main/doc/md048.md)
    */
   code?: boolean
   "code-block-style"?: boolean | MD046Class
@@ -44,7 +60,10 @@ export interface Config {
    */
   default?: boolean
   /**
-   * emphasis - MD036, MD037, MD049, MD050
+   * emphasis - [MD036](https://github.com/DavidAnson/markdownlint/blob/main/doc/md036.md),
+   * [MD037](https://github.com/DavidAnson/markdownlint/blob/main/doc/md037.md),
+   * [MD049](https://github.com/DavidAnson/markdownlint/blob/main/doc/md049.md),
+   * [MD050](https://github.com/DavidAnson/markdownlint/blob/main/doc/md050.md)
    */
   emphasis?: boolean
   "emphasis-style"?: boolean | MD049Class
@@ -58,55 +77,92 @@ export interface Config {
   "first-line-h1"?: boolean | MD041Class
   "first-line-heading"?: boolean | MD041Class
   /**
-   * hard_tab - MD010
+   * hard_tab - [MD010](https://github.com/DavidAnson/markdownlint/blob/main/doc/md010.md)
    */
   hard_tab?: boolean
   "header-increment"?: boolean
   "header-start-left"?: boolean
   "header-style"?: boolean | MD003Class
   /**
-   * headers - MD001, MD002, MD003, MD018, MD019, MD020, MD021, MD022, MD023, MD024, MD025,
-   * MD026, MD036, MD041, MD043
+   * headers - [MD001](https://github.com/DavidAnson/markdownlint/blob/main/doc/md001.md),
+   * [MD002](https://github.com/DavidAnson/markdownlint/blob/main/doc/md002.md),
+   * [MD003](https://github.com/DavidAnson/markdownlint/blob/main/doc/md003.md),
+   * [MD018](https://github.com/DavidAnson/markdownlint/blob/main/doc/md018.md),
+   * [MD019](https://github.com/DavidAnson/markdownlint/blob/main/doc/md019.md),
+   * [MD020](https://github.com/DavidAnson/markdownlint/blob/main/doc/md020.md),
+   * [MD021](https://github.com/DavidAnson/markdownlint/blob/main/doc/md021.md),
+   * [MD022](https://github.com/DavidAnson/markdownlint/blob/main/doc/md022.md),
+   * [MD023](https://github.com/DavidAnson/markdownlint/blob/main/doc/md023.md),
+   * [MD024](https://github.com/DavidAnson/markdownlint/blob/main/doc/md024.md),
+   * [MD025](https://github.com/DavidAnson/markdownlint/blob/main/doc/md025.md),
+   * [MD026](https://github.com/DavidAnson/markdownlint/blob/main/doc/md026.md),
+   * [MD036](https://github.com/DavidAnson/markdownlint/blob/main/doc/md036.md),
+   * [MD041](https://github.com/DavidAnson/markdownlint/blob/main/doc/md041.md),
+   * [MD043](https://github.com/DavidAnson/markdownlint/blob/main/doc/md043.md)
    */
   headers?: boolean
   "heading-increment"?: boolean
   "heading-start-left"?: boolean
   "heading-style"?: boolean | MD003Class
   /**
-   * headings - MD001, MD002, MD003, MD018, MD019, MD020, MD021, MD022, MD023, MD024, MD025,
-   * MD026, MD036, MD041, MD043
+   * headings - [MD001](https://github.com/DavidAnson/markdownlint/blob/main/doc/md001.md),
+   * [MD002](https://github.com/DavidAnson/markdownlint/blob/main/doc/md002.md),
+   * [MD003](https://github.com/DavidAnson/markdownlint/blob/main/doc/md003.md),
+   * [MD018](https://github.com/DavidAnson/markdownlint/blob/main/doc/md018.md),
+   * [MD019](https://github.com/DavidAnson/markdownlint/blob/main/doc/md019.md),
+   * [MD020](https://github.com/DavidAnson/markdownlint/blob/main/doc/md020.md),
+   * [MD021](https://github.com/DavidAnson/markdownlint/blob/main/doc/md021.md),
+   * [MD022](https://github.com/DavidAnson/markdownlint/blob/main/doc/md022.md),
+   * [MD023](https://github.com/DavidAnson/markdownlint/blob/main/doc/md023.md),
+   * [MD024](https://github.com/DavidAnson/markdownlint/blob/main/doc/md024.md),
+   * [MD025](https://github.com/DavidAnson/markdownlint/blob/main/doc/md025.md),
+   * [MD026](https://github.com/DavidAnson/markdownlint/blob/main/doc/md026.md),
+   * [MD036](https://github.com/DavidAnson/markdownlint/blob/main/doc/md036.md),
+   * [MD041](https://github.com/DavidAnson/markdownlint/blob/main/doc/md041.md),
+   * [MD043](https://github.com/DavidAnson/markdownlint/blob/main/doc/md043.md)
    */
   headings?: boolean
   /**
-   * hr - MD035
+   * hr - [MD035](https://github.com/DavidAnson/markdownlint/blob/main/doc/md035.md)
    */
   hr?: boolean
   "hr-style"?: boolean | MD035Class
   /**
-   * html - MD033
+   * html - [MD033](https://github.com/DavidAnson/markdownlint/blob/main/doc/md033.md)
    */
   html?: boolean
   /**
-   * images - MD045, MD052, MD053
+   * images - [MD045](https://github.com/DavidAnson/markdownlint/blob/main/doc/md045.md),
+   * [MD052](https://github.com/DavidAnson/markdownlint/blob/main/doc/md052.md),
+   * [MD053](https://github.com/DavidAnson/markdownlint/blob/main/doc/md053.md)
    */
   images?: boolean
   /**
-   * indentation - MD005, MD006, MD007, MD027
+   * indentation - [MD005](https://github.com/DavidAnson/markdownlint/blob/main/doc/md005.md),
+   * [MD006](https://github.com/DavidAnson/markdownlint/blob/main/doc/md006.md),
+   * [MD007](https://github.com/DavidAnson/markdownlint/blob/main/doc/md007.md),
+   * [MD027](https://github.com/DavidAnson/markdownlint/blob/main/doc/md027.md)
    */
   indentation?: boolean
   /**
-   * language - MD040
+   * language - [MD040](https://github.com/DavidAnson/markdownlint/blob/main/doc/md040.md)
    */
   language?: boolean
   "line-length"?: boolean | MD013Class
   /**
-   * line_length - MD013
+   * line_length - [MD013](https://github.com/DavidAnson/markdownlint/blob/main/doc/md013.md)
    */
   line_length?: boolean
   "link-fragments"?: boolean
   "link-image-reference-definitions"?: boolean | MD053Class
   /**
-   * links - MD011, MD034, MD039, MD042, MD051, MD052, MD053
+   * links - [MD011](https://github.com/DavidAnson/markdownlint/blob/main/doc/md011.md),
+   * [MD034](https://github.com/DavidAnson/markdownlint/blob/main/doc/md034.md),
+   * [MD039](https://github.com/DavidAnson/markdownlint/blob/main/doc/md039.md),
+   * [MD042](https://github.com/DavidAnson/markdownlint/blob/main/doc/md042.md),
+   * [MD051](https://github.com/DavidAnson/markdownlint/blob/main/doc/md051.md),
+   * [MD052](https://github.com/DavidAnson/markdownlint/blob/main/doc/md052.md),
+   * [MD053](https://github.com/DavidAnson/markdownlint/blob/main/doc/md053.md)
    */
   links?: boolean
   "list-indent"?: boolean
@@ -526,7 +582,9 @@ export interface Config {
   "no-trailing-punctuation"?: boolean | Md026
   "no-trailing-spaces"?: boolean | Md009
   /**
-   * ol - MD029, MD030, MD032
+   * ol - [MD029](https://github.com/DavidAnson/markdownlint/blob/main/doc/md029.md),
+   * [MD030](https://github.com/DavidAnson/markdownlint/blob/main/doc/md030.md),
+   * [MD032](https://github.com/DavidAnson/markdownlint/blob/main/doc/md032.md)
    */
   ol?: boolean
   "ol-prefix"?: boolean | Md029
@@ -538,27 +596,44 @@ export interface Config {
   "single-title"?: boolean | Md025
   "single-trailing-newline"?: boolean
   /**
-   * spaces - MD018, MD019, MD020, MD021, MD023
+   * spaces - [MD018](https://github.com/DavidAnson/markdownlint/blob/main/doc/md018.md),
+   * [MD019](https://github.com/DavidAnson/markdownlint/blob/main/doc/md019.md),
+   * [MD020](https://github.com/DavidAnson/markdownlint/blob/main/doc/md020.md),
+   * [MD021](https://github.com/DavidAnson/markdownlint/blob/main/doc/md021.md),
+   * [MD023](https://github.com/DavidAnson/markdownlint/blob/main/doc/md023.md)
    */
   spaces?: boolean
   /**
-   * spelling - MD044
+   * spelling - [MD044](https://github.com/DavidAnson/markdownlint/blob/main/doc/md044.md)
    */
   spelling?: boolean
   "strong-style"?: boolean | Md050
   /**
-   * ul - MD004, MD005, MD006, MD007, MD030, MD032
+   * ul - [MD004](https://github.com/DavidAnson/markdownlint/blob/main/doc/md004.md),
+   * [MD005](https://github.com/DavidAnson/markdownlint/blob/main/doc/md005.md),
+   * [MD006](https://github.com/DavidAnson/markdownlint/blob/main/doc/md006.md),
+   * [MD007](https://github.com/DavidAnson/markdownlint/blob/main/doc/md007.md),
+   * [MD030](https://github.com/DavidAnson/markdownlint/blob/main/doc/md030.md),
+   * [MD032](https://github.com/DavidAnson/markdownlint/blob/main/doc/md032.md)
    */
   ul?: boolean
   "ul-indent"?: boolean | Md007
   "ul-start-left"?: boolean
   "ul-style"?: boolean | Md004
   /**
-   * url - MD034
+   * url - [MD034](https://github.com/DavidAnson/markdownlint/blob/main/doc/md034.md)
    */
   url?: boolean
   /**
-   * whitespace - MD009, MD010, MD012, MD027, MD028, MD030, MD037, MD038, MD039
+   * whitespace - [MD009](https://github.com/DavidAnson/markdownlint/blob/main/doc/md009.md),
+   * [MD010](https://github.com/DavidAnson/markdownlint/blob/main/doc/md010.md),
+   * [MD012](https://github.com/DavidAnson/markdownlint/blob/main/doc/md012.md),
+   * [MD027](https://github.com/DavidAnson/markdownlint/blob/main/doc/md027.md),
+   * [MD028](https://github.com/DavidAnson/markdownlint/blob/main/doc/md028.md),
+   * [MD030](https://github.com/DavidAnson/markdownlint/blob/main/doc/md030.md),
+   * [MD037](https://github.com/DavidAnson/markdownlint/blob/main/doc/md037.md),
+   * [MD038](https://github.com/DavidAnson/markdownlint/blob/main/doc/md038.md),
+   * [MD039](https://github.com/DavidAnson/markdownlint/blob/main/doc/md039.md)
    */
   whitespace?: boolean
   [property: string]: any

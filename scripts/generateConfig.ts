@@ -30,24 +30,42 @@ async function main() {
 function generateJSDocDescriptions({ properties }: any) {
   for (const [name, property] of Object.entries<any>(properties)) {
     if (isRuleDefinition(name)) {
-      property.description = generateRuleDescription(name, property.description)
+      property.description = generateRuleJSDoc(name, property.description)
+    } else if (isGroupDefinition(property)) {
+      property.description = generateGroupJSDoc(name, property.description)
     }
   }
 }
 
-function generateRuleDescription(name: string, schemaDescription: string) {
-  const [names, title] = schemaDescription.split(" - ")
+function isRuleDefinition(ruleName: string) {
+  return ruleName.startsWith("MD")
+}
+
+function generateRuleJSDoc(name: string, description: string) {
+  const [names, title] = description.split(" - ")
   const [_, ...aliases] = names.split("/")
   const aliasesAsText = aliases.map((alias) => `\`${alias}\``).join(", ")
 
-  const lowercasedName = name.toLowerCase()
-  const documentationUrl = `https://github.com/DavidAnson/markdownlint/blob/main/doc/${lowercasedName}.md`
-  const documentationMarkdownLink = `[${name}](${documentationUrl})`
-  return `${title}.\n\nAliases: ${aliasesAsText}\n\n@see ${documentationMarkdownLink}`
+  const url = getDocsUrlForRule(name)
+  return `${title}.\n\nAliases: ${aliasesAsText}\n\n@see ${url}`
 }
 
-function isRuleDefinition(ruleName: string) {
-  return ruleName.startsWith("MD")
+function isGroupDefinition({ description }: any) {
+  return description?.includes(" - MD")
+}
+
+function generateGroupJSDoc(name: string, description: string) {
+  const [_, rulesComaSeparated] = description.split(" - ")
+  const rules = rulesComaSeparated.split(", ")
+  const ruleLinks = rules.map((ruleName) => getDocsUrlForRule(ruleName))
+  const rulesLinksComaSeparated = ruleLinks.join(", ")
+  return `${name} - ${rulesLinksComaSeparated}`
+}
+
+function getDocsUrlForRule(name: string) {
+  const lowercasedName = name.toLowerCase()
+  const documentationUrl = `https://github.com/DavidAnson/markdownlint/blob/main/doc/${lowercasedName}.md`
+  return `[${name}](${documentationUrl})`
 }
 
 async function quicktypeJSONSchema(jsonSchemaString: string) {
