@@ -1,7 +1,7 @@
-import { defineConfig } from "rollup"
 import typescript from "@rollup/plugin-typescript"
-import dts from "rollup-plugin-dts"
+import { defineConfig } from "rollup"
 import del from "rollup-plugin-delete"
+import dts from "rollup-plugin-dts"
 
 export default defineConfig([
   {
@@ -10,10 +10,6 @@ export default defineConfig([
       {
         file: "dist/index.cjs",
         format: "cjs",
-      },
-      {
-        file: "dist/index.mjs",
-        format: "esm",
       },
     ],
     plugins: [
