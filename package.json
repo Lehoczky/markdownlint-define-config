@@ -9,6 +9,8 @@
     "format:write": "prettier \"./**\" --write --ignore-unknown",
     "lint": "npm run eslint:fix && npm run format:write"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/index.js",
