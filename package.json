@@ -1,0 +1,48 @@
+{
+  "name": "@lehoczky/markdownlint-define-config",
+  "version": "0.1.0",
+  "description": "Provide a defineConfig function for .markdownlint.js files",
+  "scripts": {
+    "build": "rollup -c",
+    "generate-config": "tsx scripts/generateConfig.ts",
+    "eslint:fix": "eslint . --ext=.js,.ts --fix --max-warnings=0",
+    "format:write": "prettier \"./**\" --write --ignore-unknown",
+    "lint": "npm run eslint:fix && npm run format:write"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Zoltan Lehoczky",
+    "email": "ifjlehoczkyzoltan@gmail.com",
+    "url": "https://github.com/Lehoczky"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@lehoczky/eslint-config-typescript": "^0.0.2",
+    "@lehoczky/prettier-config": "^1.0.0",
+    "@rollup/plugin-typescript": "^11.1.3",
+    "@types/node": "18",
+    "eslint": "^8.49.0",
+    "eslint-define-config": "^1.23.0",
+    "markdownlint": "^0.31.0",
+    "markdownlint-cli2": "^0.9.2",
+    "prettier": "^3.0.3",
+    "quicktype-core": "^23.0.75",
+    "rollup": "^3.29.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^6.0.2",
+    "tslib": "^2.6.2",
+    "tsx": "^3.12.9",
+    "typescript": "~5.1"
+  },
+  "prettier": "@lehoczky/prettier-config",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist/types"
+  },
+  "include": ["scripts/**/*", "src/**/*"]
+}
