@@ -1,6 +1,6 @@
 {
   "name": "@lehoczky/markdownlint-define-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Provide a defineConfig function for .markdownlint.js files",
   "scripts": {
     "build": "rollup -c",
