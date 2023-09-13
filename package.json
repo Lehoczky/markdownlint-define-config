@@ -18,11 +18,25 @@
   "files": [
     "dist"
   ],
-  "keywords": [],
+  "keywords": [
+    "config",
+    "configuration",
+    "define-config",
+    "markdownlint",
+    "markdownlint-cli",
+    "markdownlint-config",
+    "typed",
+    "typescript"
+  ],
   "author": {
     "name": "Zoltan Lehoczky",
     "email": "ifjlehoczkyzoltan@gmail.com",
     "url": "https://github.com/Lehoczky"
+  },
+  "homepage": "https://github.com/Lehoczky/markdownlint-define-config",
+  "repository": {
+    "url": "https://github.com/Lehoczky/markdownlint-define-config.git",
+    "type": "git"
   },
   "license": "MIT",
   "devDependencies": {
