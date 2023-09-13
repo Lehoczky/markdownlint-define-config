@@ -10,9 +10,9 @@
     "lint": "npm run eslint:fix && npm run format:write"
   },
   "exports": {
-    "require": {
-      "types": "./index.d.cts",
-      "default": "./index.cjs"
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [

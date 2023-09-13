@@ -8,7 +8,7 @@ export default defineConfig([
     input: "src/index.ts",
     output: [
       {
-        file: "dist/index.cjs",
+        file: "dist/index.js",
         format: "cjs",
       },
     ],
@@ -25,7 +25,7 @@ export default defineConfig([
     input: "./dist/types/index.d.ts",
     output: [
       {
-        file: "dist/index.d.cts",
+        file: "dist/index.d.ts",
       },
     ],
     plugins: [
