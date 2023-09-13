@@ -28,11 +28,31 @@ async function main() {
 }
 
 function generateJSDocDescriptions({ properties }: any) {
+  const descriptionPerAliases: Record<string, string> = {}
+  const isAlias = (name: string) => {
+    return Object.keys(descriptionPerAliases).includes(name)
+  }
+
   for (const [name, property] of Object.entries<any>(properties)) {
     if (isRuleDefinition(name)) {
-      property.description = generateRuleJSDoc(name, property.description)
+      const { ruleJSDoc, aliases } = generateRuleJSDoc(
+        name,
+        property.description,
+      )
+
+      for (const { name, jsdoc } of aliases) {
+        descriptionPerAliases[name] = jsdoc
+      }
+
+      property.description = ruleJSDoc
     } else if (isGroupDefinition(property)) {
       property.description = generateGroupJSDoc(name, property.description)
+    }
+  }
+
+  for (const [name, property] of Object.entries<any>(properties)) {
+    if (isAlias(name)) {
+      property.description = descriptionPerAliases[name]
     }
   }
 }
@@ -47,7 +67,16 @@ function generateRuleJSDoc(name: string, description: string) {
   const aliasesAsText = aliases.map((alias) => `\`${alias}\``).join(", ")
 
   const url = getDocsUrlForRule(name)
-  return `${title}.\n\nAliases: ${aliasesAsText}\n\n@see ${url}`
+  const ruleJSDoc = `${title}.\n\nAliases: ${aliasesAsText}\n\n@see ${url}`
+  const aliasesWithJSDoc = aliases.map((alias) => ({
+    name: alias,
+    jsdoc: `@see ${url}`,
+  }))
+
+  return {
+    ruleJSDoc,
+    aliases: aliasesWithJSDoc,
+  }
 }
 
 function isGroupDefinition({ description }: any) {
