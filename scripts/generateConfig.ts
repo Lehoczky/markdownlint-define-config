@@ -18,7 +18,7 @@ async function main() {
 
   // This is needed, otherwise the ts interface would be invalid
   schema.additionalProperties = true
-  generateJSDocDescriptions(schema)
+  await generateJSDocDescriptions(schema)
 
   const text = await quicktypeJSONSchema(JSON.stringify(schema))
   const textWithEslintIgnoreComment = addEslintIgnoreComment(text)
@@ -27,7 +27,7 @@ async function main() {
   await writeFile(OUTPUT_PATH, formattedText)
 }
 
-function generateJSDocDescriptions({ properties }: any) {
+async function generateJSDocDescriptions({ properties }: any) {
   const descriptionPerAliases: Record<string, string> = {}
   const isAlias = (name: string) => {
     return Object.keys(descriptionPerAliases).includes(name)
@@ -35,7 +35,7 @@ function generateJSDocDescriptions({ properties }: any) {
 
   for (const [name, property] of Object.entries<any>(properties)) {
     if (isRuleDefinition(name)) {
-      const { ruleJSDoc, aliases } = generateRuleJSDoc(
+      const { ruleJSDoc, aliases } = await generateRuleJSDoc(
         name,
         property.description,
       )
@@ -61,22 +61,32 @@ function isRuleDefinition(ruleName: string) {
   return ruleName.startsWith("MD")
 }
 
-function generateRuleJSDoc(name: string, description: string) {
+async function generateRuleJSDoc(name: string, description: string) {
   const [names, title] = description.split(" - ")
   const [_, ...aliases] = names.split("/")
   const aliasesAsText = aliases.map((alias) => `\`${alias}\``).join(", ")
 
   const url = getDocsUrlForRule(name)
-  const ruleJSDoc = `${title}.\n\nAliases: ${aliasesAsText}\n\n@see ${url}`
+  const isDeprecated = await isDeprecatedRule(name)
+  const deprecationNotice = isDeprecated ? "\n@deprecated" : ""
+
+  const ruleJSDoc = `${title}.\n\nAliases: ${aliasesAsText}\n\n@see ${url}${deprecationNotice}`
   const aliasesWithJSDoc = aliases.map((alias) => ({
     name: alias,
-    jsdoc: `@see ${url}`,
+    jsdoc: `@see ${url}${deprecationNotice}`,
   }))
 
   return {
     ruleJSDoc,
     aliases: aliasesWithJSDoc,
   }
+}
+
+async function isDeprecatedRule(name: string) {
+  const lowercasedName = name.toLowerCase()
+  const pathToDocsOnDisk = `node_modules/markdownlint/doc/${lowercasedName}.md`
+  const docsContent = await readFile(pathToDocsOnDisk, { encoding: "utf8" })
+  return docsContent.includes("> This rule is deprecated")
 }
 
 function isGroupDefinition({ description }: any) {

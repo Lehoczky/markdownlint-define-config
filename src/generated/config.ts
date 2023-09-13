@@ -101,10 +101,12 @@ export interface Config {
   "fenced-code-language"?: boolean | MD040Class
   /**
    * @see [MD002](https://github.com/DavidAnson/markdownlint/blob/main/doc/md002.md)
+   * @deprecated
    */
   "first-header-h1"?: boolean | MD002Class
   /**
    * @see [MD002](https://github.com/DavidAnson/markdownlint/blob/main/doc/md002.md)
+   * @deprecated
    */
   "first-heading-h1"?: boolean | MD002Class
   /**
@@ -256,6 +258,7 @@ export interface Config {
    * Aliases: `first-heading-h1`, `first-header-h1`
    *
    * @see [MD002](https://github.com/DavidAnson/markdownlint/blob/main/doc/md002.md)
+   * @deprecated
    */
   MD002?: boolean | MD002Class
   /**
@@ -288,6 +291,7 @@ export interface Config {
    * Aliases: `ul-start-left`
    *
    * @see [MD006](https://github.com/DavidAnson/markdownlint/blob/main/doc/md006.md)
+   * @deprecated
    */
   MD006?: boolean
   /**
@@ -791,6 +795,7 @@ export interface Config {
   "ul-indent"?: boolean | Md007
   /**
    * @see [MD006](https://github.com/DavidAnson/markdownlint/blob/main/doc/md006.md)
+   * @deprecated
    */
   "ul-start-left"?: boolean
   /**
