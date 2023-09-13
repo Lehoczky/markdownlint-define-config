@@ -1,5 +1,7 @@
 # markdownlint-define-config
 
+[![NPM version](https://img.shields.io/npm/v/@lehoczky/markdownlint-define-config.svg)](https://www.npmjs.com/package/@lehoczky/markdownlint-define-config)
+
 Provide a `defineMarkdownlintConfig()` function for [markdownlint](https://github.com/DavidAnson/markdownlint) configuration files. Inspired by vite's [defineConfig](https://vitejs.dev/config/#config-intellisense) and [eslint-define-config](https://github.com/Shinigami92/eslint-define-config).
 
 With `defineMarkdownlintConfig()` you can have type checking, documentation, deprecation warnings, and autocompletion support directly in your `.markdownlint.js` file:
