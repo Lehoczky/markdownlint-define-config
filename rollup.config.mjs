@@ -25,7 +25,7 @@ export default defineConfig([
     input: "./dist/types/index.d.ts",
     output: [
       {
-        file: "dist/index.d.ts",
+        file: "dist/index.d.cts",
       },
     ],
     plugins: [
