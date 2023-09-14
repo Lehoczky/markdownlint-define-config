@@ -42,8 +42,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@lehoczky/eslint-config-typescript": "^0.0.2",
-    "@lehoczky/prettier-config": "^1.0.0",
+    "@lehoczky/eslint-config-typescript": "^0.0.3",
+    "@lehoczky/prettier-config": "^1.0.1",
     "@rollup/plugin-typescript": "^11.1.3",
     "@types/node": "18",
     "eslint": "^8.49.0",
@@ -56,8 +56,8 @@
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^6.0.2",
     "tslib": "^2.6.2",
-    "tsx": "^3.12.9",
-    "typescript": "~5.1"
+    "tsx": "^3.12.10",
+    "typescript": "~5.1.6"
   },
   "prettier": "@lehoczky/prettier-config",
   "publishConfig": {
